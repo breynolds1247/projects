@@ -11,7 +11,7 @@ from matplotlib import pyplot as plt
 def main():
 
     #Open dataframes of scraped data
-    fantData = pd.read_csv("NFLFantasyData2021.csv")
+    fantData = pd.read_csv("scrapedData/NFLFantasyData2021.csv")
 
     #Create dataframe for each position group
     qbData = fantData[fantData['FantPos'] == "QB"]
