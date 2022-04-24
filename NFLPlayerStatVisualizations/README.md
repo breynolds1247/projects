@@ -1,11 +1,19 @@
-#Fantasy Football Stats Visualizations
+# Fantasy Football Stats Visualizations
 
-##Introduction
+## Introduction
 
-##Code
+## Code
 
-####Web Scraping Algorithm
+#### Web Scraping Algorithm
 
-####Visualizations Script
+#### Visualizations Script
 
-##Results & Analysis
+## Results & Analysis
+
+#### Quaterbacks
+
+#### Running Backs
+
+#### Wide Receivers
+
+#### Tight Ends
