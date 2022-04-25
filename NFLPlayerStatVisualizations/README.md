@@ -10,7 +10,7 @@ Finally, after the web scraping was successfully performed, I obviously wanted t
 
 The data visualizations that were created are in the form of radar charts (or, as I know them, "spider graphs") showing each player's percentile scores in the major statistical categories for their position group. Spider graphs are commonly used to visualize the combine performance of NFL draft prospects, so I thought that it would be an interesting exercise to extend their use to fantasy-relevant data. In the "Results & Analysis" section, I present the spider graphs most of the projected contributors in fantasy drafts for this upcoming NFL season and discuss some observations that can be made.
 
-####Technical skills used in this project:
+#### Technical skills used in this project:
 
 Python (Pandas, Matplotlib, Numpy, BeautifulSoup), Web Scraping, Data Cleaning, Plotting/Visualizations
 
@@ -30,8 +30,8 @@ If successful, the script will produce 5 output CSV files- one for each major po
 
 Some important features of the code are:
 
--**Lines 16-20:** The URLs containing the data tables to be scraped are entered here.
--**Lines 186-190:** The output CSV file paths are defined here.
+- **Lines 16-20:** The URLs containing the data tables to be scraped are entered here.
+- **Lines 186-190:** The output CSV file paths are defined here.
 
 #### Visualizations Script
 
@@ -45,10 +45,10 @@ The output of this script will be in the form of several png image files contain
 
 Some important features of the code are:
 
--**Line 14:** The path to the input CSV file is defined here. As the script is currently written, it will accept the fantasy data CSV file as scraped using `scrapePlayerData.py`.
--**Lines 23-35:** The player position tiers are defined here. If left unchanged, the tiers include 14 players each, as ordered by the expert-consensus fantasy draft rankings from [FantasyPros.com](https://www.fantasypros.com/).
--**Lines 84-91:** Data selections are made here. For this analysis, percentile rankings were calculated including only player who appeared in 7 or more games and registered at least 5 PPR fantasy points per game. These selections serve to remove fantasy-irrelevant players who would artificially drive up the percentile rankings of the players being analyzed.
--**Lines 250, 258:** The output file paths are defined here.
+- **Line 14:** The path to the input CSV file is defined here. As the script is currently written, it will accept the fantasy data CSV file as scraped using `scrapePlayerData.py`.
+- **Lines 23-35:** The player position tiers are defined here. If left unchanged, the tiers include 14 players each, as ordered by the expert-consensus fantasy draft rankings from [FantasyPros.com](https://www.fantasypros.com/).
+- **Lines 84-91:** Data selections are made here. For this analysis, percentile rankings were calculated including only player who appeared in 7 or more games and registered at least 5 PPR fantasy points per game. These selections serve to remove fantasy-irrelevant players who would artificially drive up the percentile rankings of the players being analyzed.
+- **Lines 250, 258:** The output file paths are defined here.
 
 ## Results & Analysis
 
@@ -60,22 +60,62 @@ Without further ado, let's see how the top NFL players stacked up against each o
 
 #### Quaterbacks
 
+#### QB1
 ![QB1s](visualizations/spiderGraphs_qb1.png)
+
+#### QB2
 ![QB2s](visualizations/spiderGraphs_qb2.png)
+
+#### Observations:
+- The top QB1s are elite in most passing categories across the board, with the exception of Lamar JAckson and Jalen Hurts, who's value clearly comes from outlier rushing ability at the position.
+- Joe Burrow has some outlier numbers (a very spikey spider graph), even with a middling pass attempts per game ranking. If the attempts go up, he could really jump into the top-level of fantasy QBs.
+- In terms of value picks (QB2s who could jump into the next tier), Kirk Cousins looks much more similar to Dak Prescott than I would have expected, and Derek Carr also put up some good passing numbers.
+- A note on rookie QBs (Justin Fields, Trevor Lawrence, Zach Wilson, Mac Jones): They all struggled mightily in their first year. This would sway me away from drafting a rookie QB to my fantasy team with any confidence of him being a reliable contributor.
 
 #### Running Backs
 
+#### RB1
 ![RB1s](visualizations/spiderGraphs_rb1.png)
+
+#### RB2
 ![RB2s](visualizations/spiderGraphs_rb2.png)
+
+#### RB3
 ![RB3s](visualizations/spiderGraphs_rb3.png)
+
+#### Observations:
+- Two RBs really set themselves apart- Jonathan Taylor and Austin Ekeler. They are elite in rushing and receiving categories, respectively, while still being great contributors in the opposite facets. They look like the clear top 2 to me.
+- Leonard Fournette was unexpectedly great last season and seems to still be under-rated moving forward.
+- There is a lot of value to be had in PPR leagues where some great receiving backs are ranked lower than they probably should be- Chase Edmonds, Cordarrelle Patterson, JD McKissic, etc.
+- RBs who's value is inflated by high touchdown numbers worry me, so James Connor looks like someone to avoid.
+- RBs with high yards per attempt might have a lot of room to grow if given more opportunity. Players like Miles Sanders, Chase Edmunds, Kareem Hunt, Rashaad Penny, and Tony Pollard could be great bargains in this respect.
 
 #### Wide Receivers
 
+#### WR1
 ![WR1s](visualizations/spiderGraphs_wr1.png)
+
+#### WR2
 ![WR2s](visualizations/spiderGraphs_wr2.png)
+
+#### WR3
 ![WR3s](visualizations/spiderGraphs_wr3.png)
+
+#### Observations
+- The very top receivers are obvious with elite contributions across the board, but there is a lot more depth of top-quality contributors at this position than the others.
+- Mike Evans profiles closer to a WR1 than his projection as a WR3.
+- Hunter Renfroe performed shockingly similar to Keenan Allen, and could be a great value if he continues his production.
+- DK Metcalf, DeAndre Hopkins, and Adam Thielen all have their value rooted in a high touchdown percentage. They are all obviously good choices, but there is some risk there if their touchdown numbers fall.
 
 #### Tight Ends
 
+#### TE1
 ![TE1s](visualizations/spiderGraphs_te1.png)
+
+#### TE2
 ![TE2s](visualizations/spiderGraphs_te2.png)
+
+#### Observations
+- Travis Kelce, Mark Andrews, George Kittle, and Rob Gronkowski are the clear top players at the position based on last year's performance.
+- Outside of the very top options, there is a lot of parity in the mid-tier-1 tight ends. I wouldn't reach for anyone if I missed out on one of the top options.
+- There is very little depth at this position- I wouldn't even consider drafting more than one tight end unless there were some exotic league rules that made it beneficial to roster more than one. 
