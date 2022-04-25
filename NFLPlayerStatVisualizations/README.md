@@ -118,4 +118,10 @@ Without further ado, let's see how the top NFL players stacked up against each o
 #### Observations
 - Travis Kelce, Mark Andrews, George Kittle, and Rob Gronkowski are the clear top players at the position based on last year's performance.
 - Outside of the very top options, there is a lot of parity in the mid-tier-1 tight ends. I wouldn't reach for anyone if I missed out on one of the top options.
-- There is very little depth at this position- I wouldn't even consider drafting more than one tight end unless there were some exotic league rules that made it beneficial to roster more than one. 
+- There is very little depth at this position- I wouldn't even consider drafting more than one tight end unless there were some exotic league rules that made it beneficial to roster more than one.
+
+## Acknowlegements
+
+All data comes from [pro-football-reference](https://www.pro-football-reference.com/) who curate an excellent resource for publicly available sports data.
+
+Fantsy draft rankings come from [FantasyPros](https://www.fantasypros.com/), a great resource for fantasy sports information.
