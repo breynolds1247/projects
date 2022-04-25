@@ -111,15 +111,14 @@ def main():
     #quality control print statements
     #print(fantData.head())
     #print(qbData.head())
-    #print(qbData.dtypes)
     #print(rbData.head())
     #print(wrData.head())
     #print(teData.head())
-    print(qbDataTrimmed.head(14))
-    print(qbDataTrimmed.shape)
-    print(rbDataTrimmed.shape)
-    print(wrDataTrimmed.shape)
-    print(teDataTrimmed.shape)
+    #print(qbDataTrimmed.head(14))
+    #print(qbDataTrimmed.shape)
+    #print(rbDataTrimmed.shape)
+    #print(wrDataTrimmed.shape)
+    #print(teDataTrimmed.shape)
 
     #Plot parameters
     #mpl.rcParams['font.family'] = 'Avenir'
@@ -188,39 +187,7 @@ def main():
     clearAxes(axes)
     plotsByFantasyRanking(te1s, teDataTrimmed, axes, teAngles, teCats, "te1")
     clearAxes(axes)
-    plotsByFantasyRanking(te2s, teDataTrimmed, axes, teAngles, teCats, "te2")
-    
-    #print(rbDataTrimmed.dtypes)
-
-    #print(rbDataTrimmed.head(42))
-
-    #print(rbDataTrimmed['Player'=='Ronald Jones II '])
-    """
-    #Loop over player groups and plot stats
-    for i,player in enumerate(qb1s):
-        
-        if len(qb1s) != len(axes):
-            print("Must define set of axes for each player. Exiting...")
-            break
-        
-        playerData = getPlayerData(qbDataTrimmed, player)
-        
-        #Check that a filled array is passed
-        if not playerData.size:
-            axes[i].set_xticklabels([])
-            axes[i].set_yticklabels([])
-            axes[i].text(np.pi/2, 1.7, player, ha='center', va='center', size=14, color='black')
-            if i == len(qb1s)-1:
-                plt.savefig()
-            continue
-
-        print(playerData)
-        color = team_colors[playerData[1]]
-        axes[i] = createSpiderGraph(axes[i], qbAngles, playerData, qbCats, color)
-
-        if i == len(qb1s)-1:
-            plt.savefig('spiderGraphs_qb1s.png', bbox_inches='tight')
-    """
+    plotsByFantasyRanking(te2s, teDataTrimmed, axes, teAngles, teCats, "te2")    
 
 def createSpiderGraph(ax, angles, player_data, categories, color='blue'):
     #Function to create and fill spider graphs 
@@ -280,12 +247,7 @@ def plotsByFantasyRanking(positionRankList, positionData, axes, positionAngles, 
             axes[i].set_yticklabels([])
             axes[i].text(np.pi/2, 1.7, player, ha='center', va='center', size=14, color='black')
             if i == len(positionRankList)-1:
-                #plt.show()
                 plt.savefig('spiderGraphs_'+groupName+'.png', bbox_inches='tight')
-                #plt.figure().clear()
-                #plt.close()
-                #plt.cla()
-                #plt.clf()
             continue
 
         #print(playerData)
@@ -294,14 +256,9 @@ def plotsByFantasyRanking(positionRankList, positionData, axes, positionAngles, 
 
         if i == len(positionRankList)-1:
             plt.savefig('spiderGraphs_'+groupName+'.png', bbox_inches='tight')
-            #plt.figure().clear()
-            #plt.close()
-            #plt.cla()
-            #plt.clf()
 
 def clearAxes(axes):
     for ax in axes:
         ax.clear()
-
 
 main()
